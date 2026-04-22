@@ -1,0 +1,11 @@
+.app-drawer {
+  .ant-drawer-header {
+    @apply p-12 border-0;
+  }
+  .ant-drawer-body {
+    @apply p-12 pt-0;
+  }
+  .ant-drawer-content-wrapper {
+    @apply w-screen !important;
+  }
+}

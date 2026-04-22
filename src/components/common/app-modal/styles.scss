@@ -1,0 +1,19 @@
+.app-modal {
+  .ant-modal-content {
+    @apply rounded-20 p-0 #{!important};
+
+    .ant-modal-header {
+      @apply mb-0 rounded-t-20 bg-primary px-16 py-8;
+
+      .ant-modal-title {
+        @apply text-16 font-[400] text-white;
+      }
+    }
+    .ant-modal-footer {
+      @apply mt-0;
+    }
+    .ant-modal-close {
+      @apply top-4 flex items-center justify-center;
+    }
+  }
+}

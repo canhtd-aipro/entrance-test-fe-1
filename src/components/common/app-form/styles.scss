@@ -1,0 +1,26 @@
+.app-form {
+  .ant-form-item-label {
+    @apply pb-0 !important;
+    @apply text-13 font-[400];
+
+    > label {
+      @apply w-full;
+    }
+  }
+
+  .ant-form-item-additional {
+    /* @apply min-h-0 !important; */
+
+    .ant-form-item-extra {
+      @apply text-10 font-[400] text-tertiary;
+    }
+  }
+}
+
+.app-form.ant-form-vertical {
+  .ant-form-item-label {
+    > label::after {
+      display: none;
+    }
+  }
+}

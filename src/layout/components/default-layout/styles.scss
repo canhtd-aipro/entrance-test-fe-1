@@ -1,0 +1,41 @@
+body:has(.default-layout) {
+  @apply overflow-y-hidden;
+}
+
+.default-layout {
+  .menubar::-webkit-scrollbar {
+    @apply w-0;
+  }
+
+  .ant-layout-sider-trigger {
+    @apply h-40 leading-40;
+  }
+  .ant-dropdown .ant-dropdown-menu {
+    @apply rounded-b-16;
+  }
+
+  .ant-menu-item-selected {
+    @apply border-0 border-r-3 border-primary border-solid bg-primary_bg text-primary;
+
+    .ant-menu-item-icon,
+    .app-menu-item {
+      @apply text-primary;
+    }
+  }
+
+  .ant-menu-title-content {
+    @apply font-[400] text-13;
+  }
+
+  .ant-menu-submenu-selected {
+    @apply bg-primary_bg;
+
+    > .ant-menu-submenu-title > .ant-menu-title-content > .ant-typography {
+      @apply text-primary;
+    }
+  }
+  .ant-menu-submenu-title,
+  .ant-menu-item {
+    @apply flex items-center !important;
+  }
+}

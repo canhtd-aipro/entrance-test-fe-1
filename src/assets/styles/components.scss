@@ -1,0 +1,109 @@
+.app-filter-form,
+.app-detail-form {
+  @apply grid w-full grid-cols-24;
+}
+
+.app-filter-form {
+  @apply gap-x-8;
+  .ant-form-item {
+    @apply mb-8;
+  }
+  > * {
+    @apply col-span-24 sm:col-span-4;
+  }
+}
+
+.app-detail-form {
+  @apply gap-x-8;
+
+  .ant-form-item {
+    @apply mb-8;
+  }
+
+  > * {
+    @apply col-span-24 sm:col-span-4;
+  }
+}
+
+.form-cols-2 {
+  > * {
+    @apply col-span-24 sm:col-span-12;
+  }
+}
+
+.form-cols-3 {
+  > * {
+    @apply col-span-24 sm:col-span-8;
+  }
+}
+
+.form-cols-4 {
+  > * {
+    @apply col-span-24 sm:col-span-6;
+  }
+}
+
+.form-cols-6 {
+  > * {
+    @apply col-span-24 sm:col-span-4;
+  }
+}
+
+.base-page:has(.flex-1-recursive) {
+  *:has(.flex-1-recursive) {
+    @apply flex flex-col overflow-y-hidden;
+  }
+
+  *:has(.flex-1-recursive.stretch) {
+    @apply flex-1;
+  }
+
+  .flex-1-recursive {
+    @apply overflow-y-hidden;
+
+    &.stretch {
+      @apply flex-1;
+    }
+  }
+
+  > *:has(.flex-1-recursive) {
+    @apply min-h-600;
+  }
+
+  .app-table.flex-1-recursive {
+    @apply relative flex flex-col;
+
+    *:has(.ant-table-content):not(.ant-table-content *) {
+      @apply flex flex-col overflow-y-hidden;
+    }
+
+    .ant-table-content:not(.ant-table-content *) {
+      @apply overflow-y-auto #{!important};
+    }
+
+    .ant-table-thead {
+      @apply sticky top-0 z-[100];
+    }
+  }
+}
+
+.ant-select-multiple .ant-select-selector {
+  @apply max-h-80 overflow-y-auto;
+
+  &::-webkit-scrollbar {
+    @apply w-4;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    @apply rounded-3;
+  }
+}
+
+.dashboard-filter-form {
+  @apply grid w-full grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.dashboard-extra-text {
+  @apply whitespace-normal break-words text-10 font-[400] text-tertiary;
+}
