@@ -1,0 +1,10 @@
+export const MAX_INT_VALUE = 2e9;
+export const MIN_INT_VALUE = -2e9;
+export const TEXTBOX_MAX_LENGTH = 100;
+export const TEXTAREA_MAX_LENGTH = 1000;
+export const ITEMS_MAX_COUNT = 1000;
+export const FOLDER_MAX_LEVEL = 10;
+export const ANNOUNCEMENT_FIlTER_MAX_LEVEL = 3;
+export const ANNOUNCEMENT_QUESTION_MAX_LEVEL = 5;
+export const ANNOUNCEMENT_ANSWER_MAX_LEVEL = 20;
+export const ESTIMATE_FOLDER_MAX_LEVEL = 4;

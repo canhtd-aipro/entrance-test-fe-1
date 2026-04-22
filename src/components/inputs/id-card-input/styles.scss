@@ -1,0 +1,9 @@
+.business-card-input {
+  .ant-upload {
+    @apply w-full;
+
+    .ant-btn {
+      @apply justify-start;
+    }
+  }
+}

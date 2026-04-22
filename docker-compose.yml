@@ -1,0 +1,10 @@
+name: ${CONTAINER_NAME:-entrance-test-fe-1}
+services:
+  app:
+    restart: unless-stopped
+    build:
+      context: .
+      args:
+        - NODE_OPTIONS=${NODE_OPTIONS}
+    environment:
+      - NODE_OPTIONS=${NODE_OPTIONS}

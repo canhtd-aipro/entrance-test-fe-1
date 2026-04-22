@@ -1,0 +1,65 @@
+{
+  "common": {
+    "actions": "Actions",
+    "create_new": "Create new",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "register": "Register",
+    "search": "Search",
+    "clear": "Clear",
+    "action_successfully": "{{action}} successfully",
+    "required": "Required",
+    "total_number": "Total: {{number}}",
+    "max_length": "Maximum {{max}} characters",
+    "range_length": "{{label}} must be between {{min}} and {{max}} characters",
+    "exceeds_maximum_value": "Exceeds maximum value",
+    "range_number": "{{label}} must be between {{min}} and {{max}}",
+    "please_enter_in_the_correct_format": "Please enter in the correct format",
+    "input_cannot_only_be_whitespace": "Input cannot only be whitespace",
+    "cancellation_confirmation": "Cancellation confirmation",
+    "cancellation_notice": "Discard your changes?",
+    "yes": "Yes",
+    "no": "No",
+    "delete_modal_title": "Delete confirmation",
+    "are_you_sure_to_action": "Are you sure to {{action}}?"
+  },
+  "layout": {
+    "categories": "Categories",
+    "todos": "Todos"
+  },
+  "category": {
+    "name": "Name",
+    "priority": "Priority",
+    "created_date": "Created date",
+    "updated_date": "Updated date",
+    "search_name": "Search by name",
+    "enter_name": "Enter category name",
+    "select_priority": "Select priority"
+  },
+  "todo": {
+    "name": "Name",
+    "deadline": "Deadline",
+    "categories": "Categories",
+    "created_date": "Created date",
+    "updated_date": "Updated date",
+    "search_name": "Search by name",
+    "enter_name": "Enter todo name",
+    "select_deadline": "Select deadline",
+    "select_categories": "Select categories"
+  },
+  "priority": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "enum": {
+    "priority": {
+      "1": "Low",
+      "2": "Medium",
+      "3": "High"
+    }
+  },
+  "auth": {},
+  "api_error": {}
+}

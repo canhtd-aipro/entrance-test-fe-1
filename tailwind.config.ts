@@ -1,0 +1,65 @@
+import type { Config } from 'tailwindcss';
+
+const config = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  safelist: [...Array.from({ length: 24 }, (_, i) => `col-start-${i + 1}`)],
+  theme: {
+    extend: {
+      spacing: Object.fromEntries([...Array(2000)].map((_, i) => [i, `${i / 16}rem`])),
+      minWidth: Object.fromEntries([...Array(2000)].map((_, i) => [i, `${i / 16}rem`])),
+      maxWidth: Object.fromEntries([...Array(2000)].map((_, i) => [i, `${i / 16}rem`])),
+      minHeight: Object.fromEntries([...Array(2000)].map((_, i) => [i, `${i / 16}rem`])),
+      maxHeight: Object.fromEntries([...Array(2000)].map((_, i) => [i, `${i / 16}rem`])),
+      fontSize: Object.fromEntries([...Array(200)].map((_, i) => [i, `${i / 16}rem`])),
+      lineHeight: Object.fromEntries([...Array(200)].map((_, i) => [i, `${i / 16}rem`])),
+      borderRadius: Object.fromEntries([...Array(40)].map((_, i) => [i, `${i / 16}rem`])),
+      borderWidth: Object.fromEntries([...Array(40)].map((_, i) => [i, `${i / 16}rem`])),
+      letterSpacing: Object.fromEntries([...Array(10)].map((_, i) => [i, `${i / 16}rem`])),
+      gridTemplateColumns: Object.fromEntries([...Array(100)].map((_, i) => [i, `repeat(${i}, minmax(0, 1fr))`])),
+      gridTemplateRows: Object.fromEntries([...Array(100)].map((_, i) => [i, `repeat(${i}, minmax(0, 1fr))`])),
+      gridColumn: Object.fromEntries([...Array(100)].map((_, i) => [`span-${i}`, `span ${i} / span ${i}`])),
+      gridColumnStart: Object.fromEntries([...Array(101)].map((_, i) => [`${i}`, `${i}`])),
+      gridColumnEnd: Object.fromEntries([...Array(101)].map((_, i) => [`${i}`, `${i}`])),
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+      },
+      colors: {
+        primary: '#C80C08',
+        primary_bg: '#FFF6F5',
+        secondary: '#1890FF',
+        secondary_bg: '#E5F6FF',
+        tertiary: '#4A5565',
+        layout_bg: '#F3F4F6',
+        link: '#1890FF',
+        danger: '#B60022',
+        danger_bg: '#FF8282',
+        success: '#3CAA0E',
+        success_bg: '#F6FFED',
+        warning: '#FAAD14',
+        warning_bg: '#FFFBE6',
+        neutral: '#1E2939',
+        neutral_bg: '#F3F4F6',
+        placeholder: '#8E939B',
+        disabled: '#EEEEEE',
+        border: '#E5E7EB',
+        text_disabled: '#0F151D',
+        link_disabled: '#D1D5DC',
+        border_disabled: '#6A7282',
+        orange_bg: '#E88459',
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  corePlugins: {
+    preflight: false,
+  },
+  plugins: [],
+} satisfies Config;
+
+export default config;

@@ -1,0 +1,17 @@
+.app-range-picker {
+  @apply w-full;
+
+  .ant-picker-panel:nth-child(2) {
+    display: none;
+  }
+
+  .ant-picker-panel:nth-child(1) {
+    button {
+      visibility: visible !important;
+    }
+  }
+
+  .ant-picker-cell:not(.ant-picker-cell-in-view) {
+    visibility: hidden !important;
+  }
+}

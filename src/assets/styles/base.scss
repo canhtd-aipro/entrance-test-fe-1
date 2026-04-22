@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(/src/assets/fonts/roboto/Roboto-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/src/assets/fonts/roboto/Roboto-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/src/assets/fonts/roboto/Roboto-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url(/src/assets/fonts/NotoSansJP.ttf) format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', 'Roboto';
+}
+
+html,
+body,
+#root {
+  @apply m-0 h-full font-[400] text-neutral;
+}
+
+#root {
+  @apply flex flex-col overflow-hidden;
+}
+
+[ant-click-animating-without-extra-node='true']::after {
+  display: none !important;
+}
+
+a {
+  @apply font-[500] text-link hover:text-link/80;
+}
+
+svg {
+  @apply align-[calc(theme(spacing.1)*-1)];
+}
+
+input:disabled,
+textarea:disabled {
+  @apply opacity-100;
+  -webkit-text-fill-color: currentcolor;
+
+  &::placeholder {
+    @apply opacity-100;
+    -webkit-text-fill-color: currentcolor;
+  }
+}
+
+.ant-btn {
+  .ant-btn-icon {
+    @apply inline-flex;
+  }
+}
+
+.ant-picker-suffix,
+.ant-picker-clear {
+  @apply text-inherit #{!important};
+}
+
+.ant-checkbox-wrapper {
+  .ant-wave-target {
+    @apply mb-auto mt-4;
+  }
+  .ant-checkbox-label {
+    @apply text-13 font-[400];
+  }
+}
