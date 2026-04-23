@@ -1,6 +1,7 @@
 import { Button, Input, TableProps } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 import { FormProps } from 'antd/lib';
+import { omit } from 'lodash';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AiOutlinePlus } from 'react-icons/ai';
@@ -59,7 +60,13 @@ const ListTodosPage: FC = () => {
     getData();
   }, [getData]);
 
-  const handleSearch: FormProps<ListTodosQuery>['onFinish'] = (values) => {};
+  useEffect(() => {
+    form.setFieldsValue(omit(query, 'page', 'pageSize'));
+  }, [form, query]);
+
+  const handleSearch: FormProps<ListTodosQuery>['onFinish'] = (values) => {
+    setQuery((prev) => ({...prev, ...values, page: 1}))
+  };
 
   const columns = useMemo(() => {
     return [
