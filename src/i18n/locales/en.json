@@ -46,7 +46,9 @@
     "search_name": "Search by name",
     "enter_name": "Enter todo name",
     "select_deadline": "Select deadline",
-    "select_categories": "Select categories"
+    "select_categories": "Select categories",
+    "priority": "Priority",
+    "select_priority": "Select priority"
   },
   "priority": {
     "low": "Low",

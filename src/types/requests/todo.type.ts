@@ -1,3 +1,4 @@
+import { Priority } from '../../enums/priority.enum';
 import { ItemDto } from '../common/item-dto.type';
 import { ListQuery } from '../common/list-query.type';
 import { CategoryEntity } from '../entities/category.entity';
@@ -12,7 +13,12 @@ export type ListTodosResponse = {
   total: number;
 };
 
-export type ListTodosQuery = ListQuery;
+export type ListTodosQuery = ListQuery & {
+  deadlineFrom?: string;
+  deadlineTo?: string;
+  categoryIds?: number[];
+  priorities?: Priority[];
+};
 
 export type TodoDetail = TodoItem & {};
 
